@@ -13,27 +13,22 @@
     <left>
         <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
             <children>
-                <ImageView fx:id="brandingImageView" fitHeight="407.0" fitWidth="228.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../../../../../../Bilder/QuizKampen.jpg" />
-                    </image>
-                </ImageView>
-                <ImageView fitHeight="195.0" fitWidth="241.0" layoutX="24.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../../../../../../Bilder/QuizKampen.jpg" />
-                    </image>
-                </ImageView>
+            <AnchorPane layoutX="-133.0" layoutY="-171.0" prefHeight="200.0" prefWidth="200.0" />
+            <ImageView fitHeight="400.0" fitWidth="310.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@quizkampenbakgrund.jpg" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
     </left>
     <right>
-        <AnchorPane prefHeight="400.0" prefWidth="332.0" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="400.0" prefWidth="176.0" BorderPane.alignment="CENTER">
             <children>
-                <ImageView fx:id="lockImageView" fitHeight="37.0" fitWidth="54.0" layoutX="112.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../../../../../../Bilder/BlåBok.jpg" />
-                    </image>
-                </ImageView>
+            <ImageView fitHeight="83.0" fitWidth="210.0" layoutX="29.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@nya_quizkampen.jpg" />
+               </image></ImageView>
                 <Label layoutX="14.0" layoutY="114.0" text="Användarnamn" />
                 <TextField fx:id="användarnamnTextField" layoutX="98.0" layoutY="110.0" />
                 <Label layoutX="17.0" layoutY="179.0" text="Lösenord" />
@@ -42,6 +37,10 @@
                 <Button fx:id="avslutaButton" layoutX="34.0" layoutY="320.0" mnemonicParsing="false" onAction="#avslutaKnappenOnAction" prefHeight="36.0" prefWidth="233.0" text="Avsluta" />
                 <Label fx:id="loginLabel" layoutX="74.0" layoutY="219.0" text="Logga in" />
             </children>
+         
         </AnchorPane>
     </right>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>

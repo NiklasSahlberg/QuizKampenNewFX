@@ -29,17 +29,28 @@ public class VäljSpelController implements Initializable {
     ObservableList<String> ronderList = FXCollections.observableArrayList(new String[]{"1", "2", "3", "4", "5", "6"});
     Utilities utilities = new Utilities();
 
+    public static String totalaFragorString;
+
+    static final String getTotalaFragorString(){
+        return totalaFragorString;
+    }
+
+
     public VäljSpelController() {
     }
 
     public void myBox(ActionEvent event) {
         if (this.comboBox.getItems() != null) {
-            System.out.println(this.comboBox.getSelectionModel().selectedItemProperty().getValue());
+           // System.out.println(this.comboBox.getSelectionModel().selectedItemProperty().getValue());
+            totalaFragorString = (String) this.comboBox.getSelectionModel().selectedItemProperty().getValue();
+            System.out.println(totalaFragorString);
+
         }
 
     }
 
     public void loggaUtKnappenOnAction(ActionEvent event) {
+
         Stage stage = (Stage)this.loggaUt.getScene().getWindow();
         stage.close();
     }
@@ -50,10 +61,11 @@ public class VäljSpelController implements Initializable {
     }
     public void startaSpel() {
         try {
+            totalaFragorString = (String) this.comboBox.getSelectionModel().selectedItemProperty().getValue();
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("category-view.fxml")));
             Stage spelStage = new Stage();
             spelStage.initStyle(StageStyle.UNDECORATED);
-            spelStage.setScene(new Scene(root, 520.0D, 400.0D));
+            spelStage.setScene(new Scene(root, 420.0D, 500.0D));
             spelStage.show();
         } catch (IOException var3) {
             var3.printStackTrace();

@@ -20,12 +20,20 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
         <Button fx:id="startaSpel" mnemonicParsing="false" onAction="#startaSpel" prefHeight="176.0" prefWidth="341.0" text="Starta spel" GridPane.rowIndex="2" />
         <Button fx:id="loggaUt" mnemonicParsing="false" onAction="#loggaUtKnappenOnAction" prefHeight="146.0" prefWidth="330.0" text="Logga ut" GridPane.columnIndex="1" GridPane.rowIndex="2" />
         <AnchorPane prefHeight="200.0" prefWidth="200.0">
             <children>
                 <ComboBox fx:id="comboBox" layoutX="140.0" layoutY="29.0" prefHeight="34.0" prefWidth="115.0" />
-                <Label layoutX="30.0" layoutY="38.0" text="Antal ronder">
+                <Label layoutX="30.0" layoutY="38.0" text="Antal frågor">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -34,7 +42,7 @@
         </AnchorPane>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
             <children>
-                <Label layoutX="32.0" layoutY="36.0" text="Antal frågor">
+                <Label layoutX="32.0" layoutY="36.0" text="Antal ronder">
                     <font>
                         <Font size="14.0" />
                     </font>

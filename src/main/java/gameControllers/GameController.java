@@ -24,6 +24,7 @@ public class GameController implements Initializable {
     public GridPane buttonPanel;
 
 
+
     String[] questions = {
             "Vad heter huvudstaden i Brasilien? ", "Vem är president i USA?"
 
@@ -43,11 +44,14 @@ public class GameController implements Initializable {
 
     };
 
+
     int index;
     String answer;
     int correctGuesses = 0;
-    int totalQuestions = questions.length;
+    int totalQuestions = Integer.parseInt(VäljSpelController.getTotalaFragorString());
     int seconds = 10;
+
+
 
     @FXML
     private Button buttonA;
@@ -94,6 +98,7 @@ public class GameController implements Initializable {
             buttonC.setText(answerOptions[index][2]);
             buttonD.setText(answerOptions[index][3]);
             // timer.start();
+
 
         }
 
